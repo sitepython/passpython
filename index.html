@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Current Time Example</title>
+	<title>Current Date and Time</title>
 </head>
 <body>
-	<p>The current time is:</p>
-	<p id="current-time"></p>
+	<h1>Today's Date and Time</h1>
+	<p>The current time is: <span id="time"></span></p>
+	<p>Today's date is: <span id="date"></span></p>
+	<p>The word of the day is: <strong>serendipity</strong></p>
 
-	<script>
-		var currentTimeElem = document.getElementById('current-time');
-		var currentTime = new Date();
-		var hours = currentTime.getHours();
-		var minutes = currentTime.getMinutes();
+	<script type="text/javascript">
+		// Get current date and time
+		var today = new Date();
+		var date = today.toLocaleDateString();
+		var time = today.toLocaleTimeString();
 
-		if (hours < 10) {
-			hours = '0' + hours;
-		}
-
-		if (minutes < 10) {
-			minutes = '0' + minutes;
-		}
-
-		currentTimeElem.innerHTML = hours + ":" + minutes;
+		// Display date and time
+		document.getElementById("time").innerHTML = time;
+		document.getElementById("date").innerHTML = date;
 	</script>
 </body>
 </html>
