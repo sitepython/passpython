@@ -2,12 +2,17 @@
 <html>
 <head>
 	<title>Current Date and Time</title>
+	<style>
+      #password {
+        display: none;
+      }
+    </style>
 </head>
 <body>
 	<h1>Today's Date and Time</h1>
 	<p>The current time is: <span id="time"></span></p>
 	<p>Today's date is: <span id="date"></span></p>
-	<p type="hidden" id="password">The word of the day is: <strong>password</strong></p>
+	<p id="password">The word of the day is: <strong>password</strong></p>
 	<script type="text/javascript">
 		// Get current date and time
 		var today = new Date();
